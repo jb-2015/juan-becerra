@@ -1,0 +1,68 @@
+.navegacionMain{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: var(--color1);
+	overflow-x: hidden;
+	min-height: 60px;
+	padding-left: 100px;
+	position: fixed;
+	width: 100%;
+	z-index: 3;
+	top: 0;
+}
+.navegacionMain > img{
+
+	fill: red;
+	aspect-ratio: 1/1;
+	width: 50px;
+	margin-right: 100px;
+	display: none;
+
+}
+.navegacionMain > .opMenu{
+	text-decoration: none;
+	color: var(--color1);
+	font-family:  sans-serif;
+	font-size: 24px;
+	padding: 0px 12px;
+	color: var(--color5);
+	z-index: 2;
+	/*border: 1px solid red;*/
+
+}
+
+
+.navegacionMain > .marcador{
+	position: absolute;
+	width: var(--iconSize1);
+	height: var(--iconSize1);
+	background-color: var(--color3);
+	border-radius: calc(var(--iconSize1)/3);
+	left: -150px;
+	
+
+}
+#markup{
+	overflow: hidden;
+	transition: all .5 ease;
+	z-index: 0;
+}
+#markup img{
+	position: relative;
+	width: 70%;
+	height: 70%;
+	top: 15%;
+	left: 15%;
+}
+
+@media (max-width: 480px){
+	.opMenu{
+		display: none;
+	}
+	
+	
+	#barraNavegacion{
+		width: 314px;
+	}
+}

@@ -1,0 +1,63 @@
+:root{
+	--anchoCarrusel:750px;
+}
+
+.carruselContent{
+	position: relative;
+	background-color: orange;
+	height: 450px;
+	width: var(--anchoCarrusel);
+	overflow-x: hidden;
+	
+
+}
+.itemContent{
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	margin-left: 0px;
+	transition: all .4s ease-in-out;
+
+}
+.itemCarrusel{
+	height: 450px;
+	width: 750px;
+	margin-left: 0px;
+	
+}
+.controlIzq{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	width: 50px;
+	margin-left: 20px;
+	z-index: 2;
+	
+}
+.controlDer{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	width: 50px;
+	right: 0;
+	z-index: 2;
+	
+}
+
+@media (max-width: 480px){
+	.carruselContent{
+		width: 100%;
+	}
+	.itemCarrusel{
+		width: 412px;
+		height: 250px;
+	}
+	.carruselContent{
+		height: 250px;
+	}
+
+}

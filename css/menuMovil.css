@@ -1,0 +1,56 @@
+.menuMovil{
+	position: fixed;
+	top: 350px;
+	left: 5px;
+	display: none;
+
+}
+.itMenu > img{
+	width: calc(var(--iconSize1)*0.6);
+}
+.itMenu{
+	position: absolute;
+	border: 2px solid var(--color2);
+}
+
+.iconMenu{
+	z-index: 6;
+	background-color: var(--color2);
+	border-radius: 50%;
+	overflow: hidden;
+	padding: 5px;
+}
+#mInicio{
+	z-index: 5;
+	background-color: var(--color4);
+	border-radius: 50%;
+	overflow: hidden;
+	padding: 5px;
+	
+}
+#mAbout{
+	z-index: 4;
+	background-color: var(--color4);
+	border-radius: 50%;
+	overflow: hidden;
+	padding: 5px;
+	
+}
+#mContactanos{
+	z-index: 3;
+	background-color: var(--color4);
+	border-radius: 50%;
+	overflow: hidden;
+	padding: 5px;
+	
+}
+
+.pagActual{
+	border: 2px solid var(--color3);
+}
+
+@media (max-width: 480px){
+	.menuMovil{
+		display: inline-block;
+	}
+}

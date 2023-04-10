@@ -1,0 +1,91 @@
+.seccionCarrusel{
+	position: relative;
+	background-image: url(../sources/fondoBlanco2.png);
+	background-position: center;
+	background-size: cover;
+	min-height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.seccionLeyenda{
+	min-height: 450px;
+	background-color: var(--color2);
+}
+.seccionLeyenda div  div  div p,h1,h2{
+	color: var(--color4);
+	text-align: center;
+}
+
+.seccionLeyenda img{
+	width: var(--iconSize2);
+}
+.seccionLeyenda .c1{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+.seccionLeyenda h3{
+	color: var(--color3);
+	font-family: sans-serif;
+}
+
+.seccionServicios{
+	min-height: 200px;
+	background-image: url(../sources/fonfoBlanco.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+.seccionServicios h1{
+	color: var(--color2);
+	text-align: center;
+	font-size: 34px;
+	width: 100%;
+	background-color: var(--color3);
+}
+.imgServicio img{
+	width: 100%;
+}
+.descServicio{
+	/*border-left: 4px solid var(--color3);*/
+}
+.descServicio h2,p{
+	color: var(--color2);
+	text-align: left;
+}
+.service{
+	border: 2px solid var(--color4);
+	border-radius: 15px;
+	margin-bottom: 20px;
+	background-color: var(--color5);
+}
+
+.seccionAbout #acercaDeMi{
+	color: var(--color2);
+
+}
+
+#imagenAbout{
+	width: 150px;
+	border-radius: 50%;
+}
+#filaFotoAcercaDeMi{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.miDescripcion{
+
+	max-width: 100%;
+	text-align: center;
+	font-style: bold;
+	font-size: 24px;
+
+}
+.rAboutMe{
+	justify-content: center;
+}

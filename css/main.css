@@ -1,0 +1,32 @@
+*{
+	font-family: sans-serif;
+}
+figure{
+	width: 100%;
+	overflow: hidden;
+	background-color: var(--color2);
+	color: var(--color5);
+	display: block;
+	position: relative;
+	float: left;
+	margin-left: 0;
+	position: relative;
+	float: left;
+	z-index: 0;
+	display: none;
+}
+figure > img{
+	width: 100%;
+
+}
+
+figure > figcaption {
+	
+	
+	justify-content: center;
+	margin-left: 15px;
+	font-family: sans-serif;
+}
+figcaption > h1,p{
+	text-align: center;
+}
