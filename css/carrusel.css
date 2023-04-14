@@ -1,63 +1,107 @@
-:root{
-	--anchoCarrusel:750px;
-}
-
 .carruselContent{
 	position: relative;
-	background-color: orange;
-	height: 450px;
-	width: var(--anchoCarrusel);
-	overflow-x: hidden;
-	
-
-}
-.itemContent{
-	height: auto;
+	height: 550px;
+	overflow: hidden;
 	display: flex;
 	flex-direction: row;
-	margin-left: 0px;
-	transition: all .4s ease-in-out;
-
+	padding: 0;
 }
+
 .itemCarrusel{
-	height: 450px;
-	width: 750px;
-	margin-left: 0px;
-	
-}
-.controlIzq{
 	position: absolute;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	width: 70%;
+	min-width: 70%;
+	margin-left: 15%;
 	height: 100%;
-	width: 50px;
-	margin-left: 20px;
-	z-index: 2;
-	
-}
-.controlDer{
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	height: 100%;
-	width: 50px;
-	right: 0;
-	z-index: 2;
-	
+	transition: all .3s ease;
 }
 
+.carruselContent> .itemCarrusel:nth-child(1){
+	left: -72%;
+	height: 80%;
+	margin-top: 4%;
+	z-index: 1;
+	background-image: url(../sources/e-comerce2.jpg);
+	background-size: cover;
+}
+.carruselContent> .itemCarrusel:nth-child(2){
+	left: 0%;
+	height: 100%;
+	margin-top: 0;
+	z-index: 1;
+	background-image: url(../sources/img2.jpg);
+	background-size: cover;
+}
+.carruselContent> .itemCarrusel:nth-child(3){
+	left: 72%;
+	height: 80%;
+	margin-top: 4%;
+	z-index: 1;
+	background-image: url(../sources/img1.jpg);
+	background-size: cover;
+}
+.carruselContent> .itemCarrusel:nth-child(4){
+	left: 0%;
+	height: 80%;
+	margin-top: 4%;
+	z-index: -1;
+	background-image: url(../sources/img1.jpg);
+	background-size: cover;
+}
+
+.controlContent{
+	justify-content: center;
+	gap:100px;
+}
+.control{
+	width: 34px;
+	height: 34px;
+	transition: all .3s ease;
+	border-radius: 50%;
+	padding: 5px;
+	background-size: cover;
+	display: inline-block;
+}
+.control:hover{
+	background-color: orange;
+	cursor: pointer;
+}
+
+#ctrlIzq{
+	background-image: url(../sources/321-arrow-left2.png);
+}
+#ctrlDer{
+	background-image: url(../sources/317-arrow-right2.png);
+}
+#numImg{
+	margin: 0;
+}
+.f1{
+	background-color: red;
+
+}
+.f2{
+	background-color: green;
+
+}
+.f3{
+	background-color: blue;
+
+}
+.f4{
+	background-color: purple;
+}
+/* vamos a definir las medidas para pantallas de celulares */
 @media (max-width: 480px){
 	.carruselContent{
-		width: 100%;
+		height: 300px;
+		
+
 	}
-	.itemCarrusel{
-		width: 412px;
-		height: 250px;
-	}
-	.carruselContent{
-		height: 250px;
+	.controlContent{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
 	}
 
 }
