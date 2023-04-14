@@ -23,6 +23,7 @@
 	z-index: 1;
 	background-image: url(../sources/e-comerce2.jpg);
 	background-size: cover;
+	background-position: center;
 }
 .carruselContent> .itemCarrusel:nth-child(2){
 	left: 0%;
@@ -31,6 +32,7 @@
 	z-index: 1;
 	background-image: url(../sources/img2.jpg);
 	background-size: cover;
+	background-position: center;
 }
 .carruselContent> .itemCarrusel:nth-child(3){
 	left: 72%;
@@ -39,6 +41,7 @@
 	z-index: 1;
 	background-image: url(../sources/img1.jpg);
 	background-size: cover;
+	background-position: center;
 }
 .carruselContent> .itemCarrusel:nth-child(4){
 	left: 0%;
@@ -47,6 +50,7 @@
 	z-index: -1;
 	background-image: url(../sources/img1.jpg);
 	background-size: cover;
+	background-position: center;
 }
 
 .controlContent{
@@ -94,7 +98,7 @@
 /* vamos a definir las medidas para pantallas de celulares */
 @media (max-width: 480px){
 	.carruselContent{
-		height: 300px;
+		height: 200px;
 		
 
 	}
