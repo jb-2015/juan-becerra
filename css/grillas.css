@@ -1,5 +1,11 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
 :root{
-	--border: none;
+	/*--border: 1px solid red;
+
+	/*--fondoF: #9DDB89FF;
+	--fondoC: #DADC74FF;*/
 	--color1: #000000;
 	--color2:#14213d;
 	--color3: #fca311;
@@ -8,7 +14,11 @@
 	--iconSize1: 50px;
 	--iconSize2: 100px;
 	--altoSection: 450px;
-
+	--fuentePrimary:'Rubik', sans-serif;
+	
+}
+*{
+	font-family: var(--fuentePrimary);
 }
 body{
 	margin:0;
@@ -21,12 +31,14 @@ body{
 	margin-left: 7%;
 	border: var(--border);
 }
-.row{
+.row1{
 	display: flex;
 	width: 99.2%;
+	height: auto;
 	flex-direction: row;
 	justify-content: space-between;
 	border: var(--border);
+	background-color: var(--fondoF)
 
 }
 .c1{
@@ -38,6 +50,7 @@ body{
 	border: var(--border);
 	margin-top: 5px;
 	margin-bottom: 5px;
+	background-color: var(--fondoC);
 }
 .c2{
 	position: relative;
@@ -48,6 +61,7 @@ body{
 	border: var(--border);
 	margin-top: 5px;
 	margin-bottom: 5px;
+	background-color: var(--fondoC);
 }
 .c3{
 	
@@ -59,6 +73,7 @@ body{
 	border: var(--border);
 	margin-top: 5px;
 	margin-bottom: 5px;
+	background-color: var(--fondoC);
 }
 .c4{
 	position: relative;
@@ -69,12 +84,121 @@ body{
 	border: var(--border);
 	margin-top: 5px;
 	margin-bottom: 5px;
+	background-color: var(--fondoC);
 }
 section{
 	margin-top: 100px;
-	
+	padding-top: 25px;
+	padding-bottom: 25px;
 	border: var(--border);
 }
+.anchoCompleto{
+	width: 100% !important;
+}
+.altoCompleto{
+	position: relative;
+	height: 100%;
+}
+.alto1-2{
+	position: relative;
+	height: 50%;
+}
+.ancho1-2{
+	position: relative;
+	width: 50%;
+}
+.alto1-4{
+	position: relative;
+	height: 25%;
+}
+.ancho1-4{
+	position: relative;
+	width: 25%;
+}
+.alto3-4{
+	position: relative;
+	height: 75%;
+}
+.ancho3-4{
+	position: relative;
+	width: 75%;
+}
+.sinPadding{
+	padding: 0;
+}
+
+.boton{
+	border-radius: 5px;
+	padding: 5px 10px;
+	border: 1px solid var(--color4);
+	background-color: var(--color3);
+	color:white;
+	text-decoration: none;
+}
+.botonGhost{
+	border-radius: 5px;
+	padding: 3px 5px;
+	border: 1px solid var(--color3);
+	text-decoration: none;
+	color: var(--color3);
+	margin: 0px 30px;
+}
+ .tCentrado{
+ 	text-align: center;
+ }
+
+ .parrafo1{
+ 	  font-size: 18px;
+	  line-height: 1.8;
+	  text-align: justify;
+	  color: var(--color5);
+	  margin: 0;
+	  padding: 50px 30px;
+	  background-color: var(--color2);
+	  border: 1px solid #cccccc;
+	  border-radius: 5px;
+	  box-shadow: 2px 2px 5px #cccccc;
+ }
+ .resaltar1{
+ 	color: var(--color3);
+ }
+
+/*ESTILOS PARA FORMULARIOS*/
+
+input,textarea,button{
+	border-radius: 5px;
+	height: 30px;
+	padding: 0px 10px;
+	width: 100%;
+	border-color: var(--color3);
+	outline-color: var(--color3);
+}
+
+input:focus{
+	outline-color: var(--color3);
+}
+textarea{
+	resize: none;
+	min-height: 200px;
+	padding:10px;
+}
+form{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap:20px;
+	padding: 20px 0px;
+
+}
+
+
+
+
+
+
+
+/*--------------------------*/
+
 
 /* MEDIA QUERY */
 @media (max-width: 1400px) and (min-width: 1121px){
@@ -86,14 +210,17 @@ section{
 }
 
 @media (max-width: 992px) and (min-width: 769px){
-	.row{
+	.row1{
    		display: block;
    	}
 	.c1,.c2{
 		min-width: 46.8%;
 	}
-	.c3,.c4{
+	.c3{
 		min-width: 97%;
+	}
+	.c4{
+		min-width: 100%;
 	}
   
 }
@@ -102,7 +229,7 @@ section{
 	.conteiner{
 		display: none;
 	}
-   	.row{
+   	.row1{
    		display: block;
    	}
     .c1,.c2,.c3,.c4{
@@ -121,12 +248,23 @@ section{
    .conteiner{
 		display: none;
 	}
-   	.row{
+   	.row1{
    		display: block;
    	}
-    .c1,.c2,.c3,.c4{
+    .c1,.c2,.c3{
     	position: relative;
-    	min-width: 93.5%;
+    	min-width: 100%;
+    	padding: 0;
+    }
+    .c4{
+    	position: relative;
+    	min-width: 100%;
+    	padding: 0;
+    }
+    section{
+    	margin-top: 25px;
+    	padding-top:10px;
+    	padding-bottom: 10px;
     }
 
 }
@@ -135,7 +273,7 @@ section{
 	.conteiner{
 		display: none;
 	}
-   	.row{
+   	.row1{
    		display: block;
    	}
     .c1,.c2,.c3,.c4{
@@ -148,7 +286,7 @@ section{
   .conteiner{
 		display: none;
 	}
-   	.row{
+   	.row1{
    		display: block;
    	}
     .c1,.c2,.c3,.c4{

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contacto</title>
+	<link rel="stylesheet" href="css/grillas.css">
+	<link rel="stylesheet" href="css/nav.css">
+	<link rel="stylesheet" href="css/menuMovil.css">
+	<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/FileSaver.js"></script>
+
+</head>
+<body>
+	<header></header>
+	<nav class="navegacionMain" id="barraNavegacion">
+		
+		<a href="index.html" class="opMenu">inicio</a>
+		
+		<a href="quienesSomos.html" class="opMenu">quienes somos</a>
+		<a href="contacto.html" class="opMenu actual">Contactanos</a>
+
+		<div class="marcador" id="markup">
+			<img src="sources/iconjb.png" alt="" id="iconNav">
+		</div>
+		
+	</nav>
+	<main>
+		<section id="formulario">
+			<div class="conteinerRow">
+				<div class="row1">
+					<div class="c2 sinPadding">
+						<div class="row1">
+							<h1>¡Envianos tu mensaje!</h1>
+						</div>
+						<div class="row1">
+							<form action="submit" method="GET" id="contacto">
+								<input type="text" name="correo" id="correoForm" class="" placeholder="Direccion de correo electronico">
+								<input type="text" name="nombre" id="nombreForm" class="" placeholder="Nombre">
+								<textarea name="mensaje" id="mensajeContacto" cols="30" rows="10" placeholder="Mensaje"></textarea>
+								<button class="boton" type="submit">Enviar</button>
+							</form>
+						</div>
+						<div class="row1">
+							<div class="c2"></div>
+							<div class="c2"></div>
+						</div>
+					</div>
+					<div class="c2 sinPadding">
+						<div class="row1">
+							<h1>Es un placer que te comuniques con nosotros!</h1>
+							
+						</div>
+						<div class="row1">
+							<p class="parrafo1">Realiza la consulta que desees. Estamos aquí para cumplir con tus peticiones. Entendemos lo importante que es tener presencia en línea, ya sea para tu negocio o para una página de uso personal. Estamos dispuestos a ayudarte a compartir tu pasión con los demás. <span class="resaltar1">¡Estás a solo un paso de hacerlo!</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+	</main>
+	<footer></footer>
+	<div class="menuMovil">
+		<div class="itMenu iconMenu"><img src="sources/190-menu-c4.png" alt=""></div>
+		<div class="itMenu pagActual" id="mInicio"><img src="sources/hogar.png" alt=""></div>
+		<div class="itMenu" id="mAbout"><img src="sources/about.png" alt=""></div>
+		<div class="itMenu" id="mContactanos"><img src="sources/communicate.png" alt=""></div>
+	</div>
+	<script type="text/javascript" src="js/menuMovil.js"></script>
+	<script type="text/javascript" src="js/nav.js"></script>
+	<script type="text/javascript" src="js/contacto/guardarDatos.js"></script>
+</body>
+</html>
