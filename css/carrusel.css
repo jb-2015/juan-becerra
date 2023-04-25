@@ -24,6 +24,7 @@
 	background-image: url(../sources/e-comerce2.jpg);
 	background-size: cover;
 	background-position: center;
+	opacity: 0.3;
 }
 .carruselContent> .itemCarrusel:nth-child(2){
 	left: 0%;
@@ -42,6 +43,7 @@
 	background-image: url(../sources/img1.jpg);
 	background-size: cover;
 	background-position: center;
+	opacity: 0.3;
 }
 .carruselContent> .itemCarrusel:nth-child(4){
 	left: 0%;
