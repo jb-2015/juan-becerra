@@ -1,9 +1,14 @@
 <?php
 
-	$file = 'datos.json';
-	$data = $_POST['data'];
+	$file = 'datos/prospectos.json';
+	$data = $_POST['data'];	
 
-	file_put_contents($file, $data);
+    // Guardar la cadena JSON en el archivo JSON
+    
+    file_put_contents($file, $data);
+
+    // Imprimir la cadena JSON resultante
+    
 	
 
 ?>
