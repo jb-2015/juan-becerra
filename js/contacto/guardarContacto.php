@@ -1,3 +1,4 @@
+
 <?php
 
 	$file = '../../datos/prospectos.json';
@@ -10,5 +11,6 @@
     // Imprimir la cadena JSON resultante
     
 	
+
 
 ?>
