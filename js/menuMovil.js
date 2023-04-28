@@ -6,6 +6,13 @@ $("#mAbout").click(function() {
 	window.location.assign("quienesSomos.html");
 
 });
+let contact = document.getElementById('mContactanos')
+contact.addEventListener('click',()=>{
+	window.location.assign("contacto.html");
+})
+
+
+
 const posInicio = $("#mInicio").offset().top;
 const posAbout = $("#mAbout").offset().left;
 const posContac= $("#mContactanos").offset().top;
