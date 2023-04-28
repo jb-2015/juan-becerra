@@ -4,6 +4,9 @@ let visor = document.getElementById('msgConteiner');
 let ventanaMsg= document.getElementById('viewerMessage')
 
 btnver.addEventListener('click', ()=>{
+	while (visor.firstChild) {
+	    visor.removeChild(visor.firstChild);
+	}
 	fetch('js/contacto/recuperarRegistros.php')
 		.then(response => response.json())
 		.then(data => {
