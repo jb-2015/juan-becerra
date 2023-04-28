@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/grillas.css">
 	<link rel="stylesheet" href="css/nav.css">
 	<link rel="stylesheet" href="css/menuMovil.css">
+	<link rel="stylesheet" href="css/contacto.css">
 	<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/FileSaver.js"></script>
 
@@ -60,7 +61,23 @@
 			
 		</section>
 	</main>
-	<footer></footer>
+	<footer>
+		<a href="#" class="botonGhost" id="btnMostrarMensajes">Ver mensajes</a>
+	</footer>
+	<div id="viewerMessage">
+		<div class="conteinerRow">
+			<div class="row1">
+				<div class="c4">
+					<h1 class="tCentrado">Mensajes Recibidos <span><a href="#" class="botonGhost" id="btnOcultar">Cerrar</a></span></h1>
+				</div>
+			</div>
+			<div class="row1">
+				<div class="c4" id="msgConteiner">
+					
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="menuMovil">
 		<div class="itMenu iconMenu"><img src="sources/190-menu-c4.png" alt=""></div>
 		<div class="itMenu pagActual" id="mInicio"><img src="sources/hogar.png" alt=""></div>
@@ -71,5 +88,6 @@
 	<script type="text/javascript" src="js/nav.js"></script>
 	<script type="text/javascript" src="js/contacto/guardarDatos.js"></script>
 	<script type="text/javascript" src="js/contacto/validaciones.js"></script>
+	<script type="text/javascript" src="js/contacto/mostrarMensajes.js"></script>
 </body>
 </html>
