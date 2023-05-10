@@ -14,7 +14,7 @@
 	min-height: 450px;
 	background-color: var(--color2);
 }
-.seccionLeyenda div  div  div p,h1,h2{
+.seccionLeyenda div  div  div p,.seccionLeyenda h1,.seccionLeyenda h2{
 	color: var(--color4);
 	text-align: center;
 }
