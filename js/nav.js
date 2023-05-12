@@ -8,6 +8,7 @@ enlaces.forEach(e=>{
 		e.style.backgroundPosition = '0 0'
 		e.style.color= 'white'
 		e.style.background= 'black';
+		
 
 	})
 
@@ -16,5 +17,6 @@ enlaces.forEach(e=>{
 		e.style.backgroundPosition = '150% 0'
 		e.style.color= 'black'
 		e.style.removeProperty('background')
+		
 	})
 })

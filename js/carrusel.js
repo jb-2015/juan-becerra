@@ -130,5 +130,5 @@ btnIzq.addEventListener('click',function(){
 		imageIndex=imagenes.length-1;
 	}
 	items[cuar].style.backgroundImage = `url(${imagenes[imageIndex]})`;
-	textPos.textContent= imageIndex+1;
+	
 });

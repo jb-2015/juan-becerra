@@ -12,7 +12,7 @@
 
 .seccionLeyenda{
 	min-height: 450px;
-	background-color: var(--color2);
+	background-color: black;
 }
 .seccionLeyenda div  div  div p,.seccionLeyenda h1,.seccionLeyenda h2{
 	color: var(--color4);
