@@ -4,10 +4,16 @@ class Slider {
 	carga
 	//VARIABLE QUE DETERMINA LA POSICION DE DEZPLAZAMIENTO
 	pos=0
+	//TEXTOS QUE VAN A IR EN CADA IMAGEN
+	listo=false
+	textPos=0;
+	textos = []
+	textBox = document.createElement('div')
+		
 	constructor(){
 		this.contenedor = document.createElement('div')
 		this.contenedor.classList.add('sliderContent')
-
+		this.textBox.classList.add('titDesc')
 
 
 	}
@@ -56,18 +62,20 @@ class Slider {
 		this.contenedor.appendChild(fondito)
 		let rot= document.createElement('div')
 		rot.classList.add('caja')
+		rot.classList.add('botonGhost')
 		let rot2= document.createElement('div')
 		rot2.classList.add('caja2')
+		rot2.classList.add('botonGhost')
 
 		//CREO LAS FLECHAS DE LOS CONTROLES 
 		let flechaI = document.createElement('img');
 		flechaI.classList.add('flecha')
-		flechaI.setAttribute('src','./sources/321-arrow-left2.png')
+		flechaI.setAttribute('src','./sources/izq1.png')
 		rot.appendChild(flechaI)
 
 		let flechaD=document.createElement('img')
 		flechaD.classList.add('flecha')
-		flechaD.setAttribute('src','./sources/317-arrow-right2.png')
+		flechaD.setAttribute('src','./sources/der1.png')
 		rot2.appendChild(flechaD)
 
 		fondito.appendChild(rot)
@@ -98,6 +106,7 @@ class Slider {
 	}
 
 	slideGo(){
+		
 		let imgs= this.contenedor.querySelectorAll('.itemS')
 		let desp= 100/imgs.length
 		this.pos-=desp
@@ -107,6 +116,7 @@ class Slider {
 		imgs.forEach(i=>{
 				i.style.left= this.pos+'%'
 		})
+		this.textoProximo()
 	}
 	slideBack(){
 		let imgs= this.contenedor.querySelectorAll('.itemS')
@@ -118,6 +128,72 @@ class Slider {
 		imgs.forEach(i=>{
 				i.style.left= this.pos+'%'
 		})
+		this.textoAnterior()
+	}
+
+	agregarTexto(titulo,descripcion){
+		let tit = document.createElement('h1')
+		tit.classList.add('titSlide')
+		tit.textContent= titulo
+		let desc= document.createElement('p')
+		desc.classList.add('descSlide')
+		desc.textContent= descripcion
+
+		
+
+		
+		this.textos.push({
+			title: tit.textContent,
+			description: desc.textContent 
+		})
+		
+		
+		if(!this.listo){
+			tit.textContent=this.textos[0].title
+			desc.textContent=this.textos[0].description
+			this.textBox.appendChild(tit)
+			this.textBox.appendChild(desc)
+			this.contenedor.appendChild(this.textBox)
+			this.listo=true
+		}
+	}
+	textoProximo(){
+		//gestion de textos
+		let con = this.contenedor.querySelector('.titDesc')
+		
+		this.textPos++
+		if(this.textPos>imagenes.length || this.textPos>=this.textos.length){
+			this.textPos=0
+		}
+		let t= con.querySelector('h1')
+		let d= con.querySelector('p')
+
+		
+		t.textContent=this.textos[this.textPos].title
+		
+		d.textContent=this.textos[this.textPos].description
+
+		//----------------
+	}
+	textoAnterior(){
+		//gestion de textos
+		let con = this.contenedor.querySelector('.titDesc')
+		
+		this.textPos--
+		if(this.textPos<0){
+			this.textPos=this.textos.length-1
+		}
+		let t= con.querySelector('h1')
+		let d= con.querySelector('p')
+
+
+		t.textContent=this.textos[this.textPos].title
+		
+		d.textContent=this.textos[this.textPos].description
+
+		
+
+		//----------------
 	}
 
 
