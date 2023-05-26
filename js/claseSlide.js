@@ -162,7 +162,7 @@ class Slider {
 		let con = this.contenedor.querySelector('.titDesc')
 		
 		this.textPos++
-		if(this.textPos>imagenes.length || this.textPos>=this.textos.length){
+		if(this.textPos>this.imagenes.length || this.textPos>=this.textos.length){
 			this.textPos=0
 		}
 		let t= con.querySelector('h1')

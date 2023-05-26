@@ -30,3 +30,10 @@ figure > figcaption {
 figcaption > h1,p{
 	text-align: center;
 }
+#flyerPrincipal>img{
+	width: 100%;
+	position: relative;
+}
+#flyerPrincipal{
+	position: relative;
+}

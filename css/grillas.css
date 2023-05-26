@@ -1,5 +1,5 @@
 
- @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+ /*@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');*/
 
 :root{
 	/*--border: 1px solid red;
@@ -14,7 +14,7 @@
 	--iconSize1: 50px;
 	--iconSize2: 100px;
 	--altoSection: 450px;
-	--fuentePrimary:'Rubik', sans-serif;
+	--fuentePrimary: sans-serif;
 	
 }
 *{
@@ -163,6 +163,9 @@ section{
  	color: var(--color3);
  }
 
+ .hContentCenter{
+ 	justify-content: center;
+ }
 /*ESTILOS PARA FORMULARIOS*/
 
 input,textarea,button{

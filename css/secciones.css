@@ -1,18 +1,20 @@
 .seccionCarrusel{
 	position: relative;
-	background-image: url(../sources/fondoBlanco2.png);
+	background-image: url(../sources/fondoSeccionCarrusel.png);
 	background-position: center;
-	background-size: cover;
-	min-height: 200px;
+	background-size: 100% 100%;
+	min-height: 500px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	perspective: 500px;
+	overflow: hidden;
 
 }
 
 .seccionLeyenda{
 	min-height: 450px;
-	background-color: black;
+	background: linear-gradient(60deg, #06067e, #3f0060);
 }
 .seccionLeyenda div  div  div p,.seccionLeyenda h1,.seccionLeyenda h2{
 	color: var(--color4);
@@ -88,4 +90,12 @@
 }
 .rAboutMe{
 	justify-content: center;
+}
+
+@media (max-width: 480px){
+	.descServicio h2, p {
+	    color: var(--color2);
+	    text-align: left;
+	    margin-left: 17px;
+	}
 }
