@@ -1,54 +1,72 @@
 let correo = document.getElementById('correoForm')
 let nom = document.getElementById('nombreForm')
-let mensaje = document.getElementById('mensajeForm')
+let mensaje = document.getElementById('mensajeContacto')
+let error = false;
 let btn = document.getElementById('enviarForm')
-
-let correoOk = false
-let nombreOk = false
-window.addEventListener('load',() =>{
-	btn.disabled = true
-	btn.style.backgroundColor= 'var(--color4)'
-})
-
-correo.addEventListener('focusout', c =>{
-	
-	let patron = new RegExp(/^[\w-\.]+[@][A-z]+[.][a-z]+([.][a-z]+)*$/);
+let patronCorreo = new RegExp(/^[\w-\.]+[@][A-z]+[.][a-z]+([.][a-z]+)*$/);
+let frm = document.getElementById('contacto')
+const listaErr= document.getElementById('errorList')
+const msgContent= document.getElementById('mensajes')
 
 
-	if(patron.test(correo.value)){
-		correo.style.borderColor = "rgba(0,200,0,0.5)"
-		correoOk=true
-		if(correoOk && nombreOk){
-			btn.disabled = false
-			btn.style.backgroundColor= 'var(--color3)'
-		}
-
-	}else{
-		correo.style.borderColor = "rgba(200,0,0,0.5)"
-		btn.disabled = true
-		correoOk=false;
-		btn.style.backgroundColor= 'var(--color4)'
+frm.addEventListener('submit', e=>{
+	error=false;
+	e.preventDefault()
+	let arr = Array.from(frm.children)
+	listaErr.innerHTML="";
+	arr.forEach(i=>{
+		i.classList.remove('error')
+	})
+	if(correo.value=="" || !patronCorreo.test(correo.value)){
+		correo.parentElement.classList.add('error')
+		let e = document.createElement('li')
+		e.textContent= "Algo anda mal en tu correo"
+		listaErr.appendChild(e)
+		error=true
+	}
+	if(nom.value==""){
+		nom.parentElement.classList.add('error')
+		let e = document.createElement('li')
+		e.textContent= "Debes ingresar un nombre"
+		listaErr.appendChild(e)
+		error= true
+	}
+	if(mensaje.value==""){
+		mensaje.parentElement.classList.add('error')
+		let e = document.createElement('li')
+		e.textContent= "El campo de mensaje es obligatorio"
+		listaErr.appendChild(e)
+		error= true
 	}
 
+	if(!error){
+		let msg= document.createElement('div')
+		msg.classList.add('msg')
 
-})
-nom.addEventListener('focusout', c => {
-	let patron = new RegExp(/^[A-z-\s]+$/)
+		let autor = document.createElement('h3')
+		autor.classList.add('msgAutor')
+		autor.textContent= nom.value
 
-	if(patron.test(nom.value)){
-		nom.style.borderColor = "rgba(0,200,0,0.5)"
-		nom.style.color= 'black'
-		nombreOk= true
-		if(correoOk && nombreOk){
-			btn.disabled = false
-			btn.style.backgroundColor= 'var(--color3)'
-		}
-	}else{
-		nom.style.borderColor = "rgba(200,0,0,0.5)"
-		nom.style.color= 'red'
-		nombreOk= false
-		btn.disabled = true
-		btn.style.backgroundColor= 'var(--color4)'
+		let contacto = document.createElement('h5')
+		contacto.classList.add('msgCorreo')
+		contacto.textContent= correo.value
+
+		let message= document.createElement('p')
+		message.classList.add('msgMensaje')
+		message.textContent= mensaje.value
+
+		let headMsg = document.createElement('div')
+		headMsg.classList.add('headMsg')
+		headMsg.appendChild(autor)
+		headMsg.appendChild(contacto)
+
+		msg.appendChild(headMsg)
+		msg.appendChild(message)
+
+		msgContent.appendChild(msg)
+
+		frm.reset();
+
 	}
 
 })

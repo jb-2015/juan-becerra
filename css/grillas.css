@@ -166,36 +166,6 @@ section{
  .hContentCenter{
  	justify-content: center;
  }
-/*ESTILOS PARA FORMULARIOS*/
-
-input,textarea,button{
-	border-radius: 5px;
-	height: 30px;
-	padding: 0px 10px;
-	width: 100%;
-	border-color: var(--color3);
-	outline-color: var(--color3);
-}
-
-input:focus{
-	outline-color: var(--color3);
-}
-textarea{
-	resize: none;
-	min-height: 200px;
-	padding:10px;
-}
-form{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap:20px;
-	padding: 20px 0px;
-
-}
-
-
-
 
 
 

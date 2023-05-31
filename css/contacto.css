@@ -1,52 +1,87 @@
-#viewerMessage{
-	position: absolute;
-	width: 60%;
-	height: 80%;
-	top:15%;
-	left: 20%;
-	z-index: 2;
-	background-color: rgba(0,0,0,1);
-	opacity: 0;
-	display: none;
-	transition: all .5s ease;
-	overflow-y: scroll;
-	border-radius: 15px;
-	box-shadow: 10px 10px 15px;
+#contacto{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap:10px;
+	perspective: 500px;
 }
-.tSecundario{
-	margin-left: 10px;
-	color: rgba(255,255,255,0.7);
-	font-size: 12px;
-	font-weight: normal;
+.error{
+	border-radius: 0px;
+	background: rgba(255,200,50,0.5);
 }
-#viewerMessage h1,h2,h3{
-	color: white;
+.inputContent{
+	display: flex;
+	width: 100%;
+	min-height: 25px;
+	border-radius: 5px;
+	border: 2px solid black;
+	box-shadow: 2px 2px 8px;
+}
+.inputContent > input{
+	margin: auto;
+	width: 90%;
+	border: none;
+	outline: none;
+	background: transparent;
+	
+}
+.inputContent > textarea{
+	margin: auto;
+	width: 90%;
+	border: none;
+	outline: none;
+	resize: none;
+	background: transparent;
 
 }
-#viewerMessage h2{
-	font-size: 16px;
-	background-color: black;
-	padding: 5px 5px;
-	margin-top: 10px;
+#errorList{
+	color: red;
+}
+#enviarForm{
+	transition: all .2s ease-in-out;
+}
+#enviarForm:hover{
+	cursor: pointer;
+	box-shadow: 5px 5px 10px black;
+	transform: translateZ(10px);
 }
 
-.itemMsg{
-	position: relative;
-	background-color: white;
-	border-radius: 1rem;
-	padding: 20px 5px;
-	padding-top: 0;
-}
-#msgConteiner{
+
+
+/*ESTULOS DE LOS MENSAJES*/
+#mensajes{
 	display: flex;
 	flex-direction: column-reverse;
 	gap: 20px;
 }
+.msg{
+	position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px 10px 0px 0px;
+    border: 2px solid black;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+.headMsg{
+	display: flex;
+    flex-direction: row;
+    gap: 15px;
+    background: linear-gradient(45deg, cyan -16%, purple 30%);
+    justify-content: space-between;
 
-@media (max-width: 480px){
-	#viewerMessage{
-		width: 100%;
-		height: 90%;
-		left: 0px;
-	}
+}
+.headMsg > h3{
+	color: white;
+	margin-left: 15px;
+}
+.headMsg > h5{
+	color: gray;
+	margin-right: 15px;
+}
+.msgMensaje{
+	width: 90%;
+    margin: auto;
+    margin-top: 10px;
 }

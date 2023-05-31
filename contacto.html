@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/nav.css">
 	
 	<link rel="stylesheet" href="css/contacto.css">	
-	<script type="text/javascript" src="js/FileSaver.js"></script>
+	
 
 </head>
 <body>
@@ -32,18 +32,24 @@
 							<h1>¡Envianos tu mensaje!</h1>
 						</div>
 						<div class="row1">
-							<form action="submit" method="GET" id="contacto">
-								<input type="text" name="correo" id="correoForm" class="" placeholder="Direccion de correo electronico">
-								<input type="text" name="nombre" id="nombreForm" class="" placeholder="Nombre">
-								<textarea name="mensaje" id="mensajeContacto" cols="30" rows="10" placeholder="Mensaje"></textarea>
+							<form action="submit" id="contacto">
+								<div class="inputContent"><input type="text" name="correo" id="correoForm" class="" placeholder="Direccion de correo electronico"></div>
+								<div class="inputContent"><input type="text" name="nombre" id="nombreForm" class="" placeholder="Nombre"></div>
+								<div class="inputContent"><textarea name="mensaje" id="mensajeContacto" cols="30" rows="10" placeholder="Mensaje"></textarea></div>
+								
+								
 								<button class="boton" type="submit" id="enviarForm">Enviar</button>
+								<ul id="errorList">
+									
+								</ul>
 							</form>
 						</div>
-
-						<div class="row1">
-							<div class="c2 sinPadding"><a href="#" class="botonGhost" id="btnMostrarMensajes">Ver mensajes</a></div>
-							<div class="c2"></div>
+						<div class="row1" id="mensajes">
+							
+							
 						</div>
+
+						
 					</div>
 					<div class="c2 sinPadding">
 						<div class="row1">
@@ -62,25 +68,12 @@
 	<footer>
 		
 	</footer>
-	<div id="viewerMessage">
-		<div class="conteinerRow">
-			<div class="row1">
-				<div class="c4">
-					<h1 class="tCentrado">Mensajes Recibidos <span class="tSecundario"><a href="#" class="botonGhost" id="btnOcultar">Cerrar</a></span></h1>
-				</div>
-			</div>
-			<div class="row1">
-				<div class="c4" id="msgConteiner">
-					
-				</div>
-			</div>
-		</div>
-	</div>
+	
 	
 	
 	<script type="text/javascript" src="js/nav.js"></script>
-	<script type="text/javascript" src="js/contacto/guardarDatos.js"></script>
+	
 	<script type="text/javascript" src="js/contacto/validaciones.js"></script>
-	<script type="text/javascript" src="js/contacto/mostrarMensajes.js"></script>
+	
 </body>
 </html>
