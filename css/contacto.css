@@ -39,6 +39,11 @@
 }
 #enviarForm{
 	transition: all .2s ease-in-out;
+	background: purple;
+	border: none;
+	height: 30px;
+	color: white;
+	border-radius: 5px;
 }
 #enviarForm:hover{
 	cursor: pointer;

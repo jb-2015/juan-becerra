@@ -53,7 +53,8 @@ frm.addEventListener('submit', e=>{
 
 		let message= document.createElement('p')
 		message.classList.add('msgMensaje')
-		message.textContent= mensaje.value
+		let format = mensaje.value.replace(/\n/g, "<br>")
+		message.innerHTML= format		
 
 		let headMsg = document.createElement('div')
 		headMsg.classList.add('headMsg')

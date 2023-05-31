@@ -72,7 +72,7 @@
 }
 
 #imagenAbout{
-	width: 150px;
+	width: 50%;
 	border-radius: 50%;
 }
 #filaFotoAcercaDeMi{
@@ -83,7 +83,7 @@
 .miDescripcion{
 
 	max-width: 100%;
-	text-align: center;
+	text-align: left;
 	font-style: bold;
 	font-size: 24px;
 
